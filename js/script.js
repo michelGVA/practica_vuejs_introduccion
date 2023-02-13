@@ -44,11 +44,11 @@ var app = new Vue({
   el: '#app',
   data: {
     col: server_data
-  }
-});/* 
+  } 
+});
 var autor = new Vue({
   el: '#autor',
   data: {
     name : 'Hellen'
   }
-}); */
+});

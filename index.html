@@ -11,10 +11,23 @@
     
     <body>
         
-        <h1 id="autor">Autor: Tu nombre aqui </h1>
+        <h1 id="autor">Autor: {{ name }}</h1>
         
         <!-- https://vuejs.org/v2/guide/index.html -->
         <div id="app">
+            <div class="jumbotron">
+                <h1 id="title">{{ col.collection.title }}</h1>
+            </div>
+
+            <div class="card-group"style="margin-left:100px;margin-right: 100px">
+                <div class="card" v-for="item in col.collection.items">
+                    <dl>
+                        <p>{{item.data}}</p>
+
+                    </dl>
+                </div>
+            </div>
+
             <!--
                 TODO: Mostrar datos del objeto collection. Ver archivo ./js/script.js
                 - Cargar la librería de VueJS y el script ./js/script.js al final de la etiqueta <body>
@@ -29,10 +42,8 @@
                                 -->
                                 
         </div>
-        <!-- versión de producción, optimizada para tamaño y velocidad -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-        <script src="./js/script.js"></script> -->
 
+        <script src="https://unpkg.com/vue"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script type="text/javascript" src="./js/script.js"></script>
